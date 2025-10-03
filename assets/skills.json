@@ -1,0 +1,19 @@
+[
+  {"name": "Dribbling", "level": "Basic", "image": "https://via.placeholder.com/100"},
+  {"name": "Passing", "level": "Basic", "image": "https://via.placeholder.com/100"},
+  {"name": "Shooting", "level": "Basic", "image": "https://via.placeholder.com/100"},
+  {"name": "Defending", "level": "Basic", "image": "https://via.placeholder.com/100"},
+  {"name": "Ball Control", "level": "Basic", "image": "https://via.placeholder.com/100"},
+
+  {"name": "Vault", "level": "Intermediate", "image": "https://via.placeholder.com/100"},
+  {"name": "Tackling", "level": "Intermediate", "image": "https://via.placeholder.com/100"},
+  {"name": "Crossing", "level": "Intermediate", "image": "https://via.placeholder.com/100"},
+  {"name": "Speed Drills", "level": "Intermediate", "image": "https://via.placeholder.com/100"},
+  {"name": "Long Pass", "level": "Intermediate", "image": "https://via.placeholder.com/100"},
+
+  {"name": "Agility", "level": "Advanced", "image": "https://via.placeholder.com/100"},
+  {"name": "Strategic Play", "level": "Advanced", "image": "https://via.placeholder.com/100"},
+  {"name": "Advanced Shooting", "level": "Advanced", "image": "https://via.placeholder.com/100"},
+  {"name": "Leadership", "level": "Advanced", "image": "https://via.placeholder.com/100"},
+  {"name": "Game Vision", "level": "Advanced", "image": "https://via.placeholder.com/100"}
+]
