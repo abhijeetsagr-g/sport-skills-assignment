@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sport_skills/skills/bloc/skills_bloc.dart';
-import 'package:sport_skills/skills/view/skill_carousel.dart';
+import 'package:sport_skills/skills/pages/skill_detailed_page.dart';
+import 'package:sport_skills/skills/widgets/skill_carousel.dart';
+import 'package:sport_skills/skills/widgets/skill_detailed.dart';
 
 class SkillView extends StatelessWidget {
   const SkillView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final skillBloc = context.read<SkillsBloc>();
+
     return Scaffold(
       appBar: AppBar(title: const Text("Sport Skills")),
       body: BlocBuilder<SkillsBloc, SkillsState>(
@@ -15,9 +19,7 @@ class SkillView extends StatelessWidget {
           if (state is SkillsLoading) {
             return const Center(child: CircularProgressIndicator());
           } else if (state is SkillsLoaded) {
-            final skills = state.filteredSkills.isNotEmpty
-                ? state.filteredSkills
-                : state.allSkills;
+            final skills = state.allSkills;
 
             final basic = skills.where((s) => s.level == "Basic").toList();
             final intermediate = skills
@@ -37,6 +39,8 @@ class SkillView extends StatelessWidget {
             );
           } else if (state is SkillsError) {
             return Center(child: Text(state.message));
+          } else if (state is SkillsOpened) {
+            return SkillDetailed(skill: state.skill);
           }
           return const SizedBox.shrink();
         },

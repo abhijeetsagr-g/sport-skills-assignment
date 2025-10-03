@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sport_skills/skills/models/skill.dart';
-import 'package:sport_skills/skills/view/skill_card.dart';
+import 'package:sport_skills/skills/widgets/skill_card.dart';
 
 class SkillCarousel extends StatelessWidget {
   final String title;
@@ -23,7 +23,10 @@ class SkillCarousel extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: skills.length,
             itemBuilder: (context, index) {
-              return SkillCard(skill: skills[index]);
+              return InkWell(
+                onTap: () {},
+                child: SkillCard(skill: skills[index]),
+              );
             },
           ),
         ),
