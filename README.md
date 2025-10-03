@@ -1,16 +1,5 @@
-# sport_skills
+### Home page with multiple skills in correct grouping and ordering of levels
+<img width="413" height="862" alt="Pasted image (2)" src="https://github.com/user-attachments/assets/76c95c85-c7e1-44ca-bf75-a2f1080145e3" />
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Detailed Page View for skill.
+<img width="421" height="860" alt="Pasted image" src="https://github.com/user-attachments/assets/7d4255e6-d20b-4a22-b336-3c06d8f9dd37" />
