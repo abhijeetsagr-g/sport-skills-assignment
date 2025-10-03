@@ -12,7 +12,7 @@ class SkillsBloc extends Bloc<SkillsEvent, SkillsState> {
 
   SkillsBloc({required this.skillRepo}) : super(SkillsInitial()) {
     on<LoadSkills>(_onLoadSkills);
-    on<FilterSkills>(_onFilterSkills);
+    on<OpenSkills>(_onOpenSkills);
   }
 
   // On Load
@@ -29,9 +29,12 @@ class SkillsBloc extends Bloc<SkillsEvent, SkillsState> {
     }
   }
 
-  // On Filter
-  void _onFilterSkills(FilterSkills event, Emitter<SkillsState> emit) {
-    final filtered = _allSkills.where((s) => s.level == event.level).toList();
-    emit(SkillsLoaded(_allSkills, filtered: filtered));
+  // On Open
+  void _onOpenSkills(OpenSkills event, Emitter<SkillsState> emit) {
+    try {
+      emit(SkillsOpened(event.skill));
+    } catch (e) {
+      emit(SkillsError("Failed To Open Skill Card"));
+    }
   }
 }

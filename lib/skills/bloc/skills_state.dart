@@ -11,14 +11,20 @@ class SkillsLoading extends SkillsState {}
 
 class SkillsLoaded extends SkillsState {
   final List<Skill> allSkills;
-  final List<Skill> filteredSkills;
 
   // Add Filtered List on Event
-  SkillsLoaded(this.allSkills, {List<Skill>? filtered})
-    : filteredSkills = filtered ?? allSkills;
+  SkillsLoaded(this.allSkills);
 
   @override
-  List<Object> get props => [allSkills, filteredSkills];
+  List<Object> get props => [allSkills];
+}
+
+class SkillsOpened extends SkillsState {
+  final Skill skill;
+  SkillsOpened(this.skill);
+
+  @override
+  List<Object> get props => [skill];
 }
 
 class SkillsError extends SkillsState {

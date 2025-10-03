@@ -7,12 +7,10 @@ abstract class SkillsEvent extends Equatable {
 
 class LoadSkills extends SkillsEvent {}
 
-class FilterSkills extends SkillsEvent {
-  // "Basic", "Intermediate", "Advanced"
-  final String level;
-
-  FilterSkills(this.level);
+class OpenSkills extends SkillsEvent {
+  final Skill skill;
+  OpenSkills(this.skill);
 
   @override
-  List<Object> get props => [level];
+  List<Object> get props => [skill];
 }
